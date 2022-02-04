@@ -11,3 +11,9 @@ function makeRows(rows, cols) {
 };
 
 makeRows(16, 16);
+
+$(document).ready(function(){
+    $('.grid-item').hover(function(){
+        $(this).addClass('hover');
+    })
+})
