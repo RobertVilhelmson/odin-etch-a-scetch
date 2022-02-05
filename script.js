@@ -6,7 +6,8 @@ function makeRows(rows, cols) {
   for (c = 0; c < (rows * cols); c++) {
     let cell = document.createElement("div");
     cell.innerText = (c + 1);
-    container.appendChild(cell).className = "grid-item";
+    
+    grid.appendChild(cell).className = "grid-item";
     $(document).ready(function () {
       $('.grid-item').hover(function () {
         $(this).addClass('hover');
