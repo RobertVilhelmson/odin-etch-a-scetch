@@ -1,5 +1,6 @@
 const container = document.getElementById("container");
 
+
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows);
   container.style.setProperty('--grid-cols', cols);
@@ -10,7 +11,11 @@ function makeRows(rows, cols) {
   };
 };
 
-makeRows(16, 16);
+function startGame() {
+  let rowsString = prompt("How many rows?", "16");
+  let rowsInt = parseInt(rowsString);
+makeRows(rowsInt, rowsInt);
+}
 
 $(document).ready(function(){
     $('.grid-item').hover(function(){
@@ -21,4 +26,3 @@ $(document).ready(function(){
 $("#clear").click(function(){
   $(".grid-item").removeClass('hover')
 });
-
