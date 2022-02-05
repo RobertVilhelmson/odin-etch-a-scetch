@@ -17,16 +17,13 @@ function makeRows(rows, cols) {
 
 
 function startGame() {
+  $( ".grid-item" ).remove();
   let rowsString = prompt("How many rows?", "16");
   let rowsInt = parseInt(rowsString);
   makeRows(rowsInt, rowsInt);
 }
 
 
-$("#clear").click(function () {
+$("#erase").click(function () {
   $(".grid-item").removeClass('hover')
-});
-
-$("#reset").click(function () {
-  $( ".grid-item" ).remove();
 });
