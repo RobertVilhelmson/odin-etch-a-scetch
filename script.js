@@ -1,6 +1,5 @@
 const container = document.getElementById("container");
 
-
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows);
   container.style.setProperty('--grid-cols', cols);
@@ -8,21 +7,27 @@ function makeRows(rows, cols) {
     let cell = document.createElement("div");
     cell.innerText = (c + 1);
     container.appendChild(cell).className = "grid-item";
+    $(document).ready(function () {
+      $('.grid-item').hover(function () {
+        $(this).addClass('hover');
+      })
+    })
   };
 };
 
+$("#start").click(function () {
+  $( ".grid-item" ).remove();
+});
+
 function startGame() {
-  let rowsString = prompt("How many rows?", "16");
+    let rowsString = prompt("How many rows?", "16");
   let rowsInt = parseInt(rowsString);
-makeRows(rowsInt, rowsInt);
+  makeRows(rowsInt, rowsInt);
 }
 
-$(document).ready(function(){
-    $('.grid-item').hover(function(){
-        $(this).addClass('hover');
-    })
-})
 
-$("#clear").click(function(){
+
+$("#clear").click(function () {
   $(".grid-item").removeClass('hover')
 });
+
