@@ -15,19 +15,18 @@ function makeRows(rows, cols) {
   };
 };
 
-$("#start").click(function () {
-  $( ".grid-item" ).remove();
-});
 
 function startGame() {
-    let rowsString = prompt("How many rows?", "16");
+  let rowsString = prompt("How many rows?", "16");
   let rowsInt = parseInt(rowsString);
   makeRows(rowsInt, rowsInt);
 }
-
 
 
 $("#clear").click(function () {
   $(".grid-item").removeClass('hover')
 });
 
+$("#reset").click(function () {
+  $( ".grid-item" ).remove();
+});
