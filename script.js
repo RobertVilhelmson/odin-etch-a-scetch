@@ -17,3 +17,8 @@ $(document).ready(function(){
         $(this).addClass('hover');
     })
 })
+
+$("#clear").click(function(){
+  $(".grid-item").removeClass('hover')
+});
+

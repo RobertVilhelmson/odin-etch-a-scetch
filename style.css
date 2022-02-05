@@ -16,10 +16,6 @@
     text-align: center;
   }
 
-  .grid-item:hover {
-      background-color: black;
-  }
-
   .grid-item.hover {
       background-color: black;
   }
